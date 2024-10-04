@@ -1,48 +1,83 @@
+interface Pessoa {
+    id: number;
+    name: string;
+    bio: string;
+}
+
+const lista: Array<Pessoa> = [
+    {"id" : 1, "name": "Ada Lovelace", "bio" : "Ada Lovelace, foi uma matemática e escritora inglesa reconhecida por ter escrito o primeiro algoritmo para ser processado por uma máquina"},
+    {"id" : 2, "name": "Alan Turing", "bio" : "Alan Turing foi um matemático, cientista da computação, lógico, criptoanalista, filósofo e biólogo teórico britânico, ele é amplamente considerado o pai da ciência da computação teórica e da inteligência artificial"},
+    {"id" : 3, "name": "Nikola Tesla", "bio" : "Nikola Tesla foi um inventor, engenheiro eletrotécnico e engenheiro mecânico sérvio, mais conhecido por suas contribuições ao projeto do moderno sistema de fornecimento de eletricidade em corrente alternada."},
+    {"id" : 4, "name": "Nicolau Copérnico", "bio": "Nicolau Copérnico foi um astrônomo e matemático polonês que desenvolveu a teoria heliocêntrica do Sistema Solar."}
+];
+
 //Letra a) com função imperativa
-function encontrarBioImperativa (idEscolhido: number): string {
-    for (let indice = 0; indice < lista.length; indice++) {
-        let dadosPessoa = lista[indice];
-        let idPessoa = dadosPessoa.id;
+function encontrarBioImperativa(idEscolhido: number): string {
+    try {
+        for (let indice = 0; indice < lista.length; indice++) {
+            const dadosPessoa = lista[indice];
+            const idPessoa = dadosPessoa.id;
 
-        if (idPessoa === idEscolhido) {
-            let bioPessoa = dadosPessoa.bio;
-            return bioPessoa
+            if (idPessoa === idEscolhido) {
+                return dadosPessoa.bio;
+            }
         }
+        throw new Error("ID não encontrado");
+    } catch (erro) {
+        return erro.message;
     }
-
-    return "Bio não encontrada"
 }
 
 //Letra a) com função funcional
-function encontrarBioFuncional (idEscolhido: number): string {
-    return lista.find(({id}) => id === idEscolhido)?.bio || "Bio não encontrada"
+function encontrarBioFuncional(idEscolhido: number): string {
+    try {
+        const pessoa = lista.find(({id})=> id === idEscolhido);
+
+        if (pessoa === undefined) {
+            throw new Error("ID não encontrado");
+        }
+        return pessoa.bio;
+    } catch (erro) {
+        return erro.message;
+    }
 }
 
 //Letra b) com função imperativa
-function encontrarNomeImperativa (idEscolhido: number): string {
-    for (let indice = 0; indice < lista.length; indice++) {
-        let dadosPessoa = lista[indice];
-        let idPessoa = dadosPessoa.id;
+function encontrarNomeImperativa(idEscolhido: number): string {
+    try {
+        for (let indice = 0; indice < lista.length; indice++) {
+            const dadosPessoa = lista[indice];
+            const idPessoa = dadosPessoa.id;
 
-        if (idPessoa === idEscolhido) {
-            let nomePessoa = dadosPessoa.name;
-            return nomePessoa
+            if (idPessoa === idEscolhido) {
+                return dadosPessoa.name;
+            }
         }
+        throw new Error("ID não encontrado");
+    } catch (erro) {
+        return erro.message;
     }
-
-    return "Nome não encontrado"
 }
 
 //Letra b) com função funcional
-function encontrarNomeFuncional (idEscolhido: number):string {
-    return lista.find(({id}) => id === idEscolhido)?.name || "Nome não encontrado"
+function encontrarNomeFuncional(idEscolhido: number): string {
+    try {
+        const pessoa = lista.find(({id})=> id === idEscolhido);
+
+        if (pessoa === undefined) {
+            throw new Error("ID não encontrado");
+        }
+        return pessoa.name;
+    } catch (erro) {
+        return erro.message;
+    }
 }
 
 //Letra c) com função imperativa
-function deletarItemImperativa (idEscolhido: number): void {
+function deletarItemImperativa(idEscolhido: number): void {
     for (let indice = 0; indice < lista.length; indice++) {
-        let dadosPessoa = lista[indice];
-        let idPessoa = dadosPessoa.id;
+        const dadosPessoa = lista[indice];
+        const idPessoa = dadosPessoa.id;
 
         if (idPessoa === idEscolhido) {
             lista.splice(indice, 1);
@@ -52,24 +87,24 @@ function deletarItemImperativa (idEscolhido: number): void {
 }
 
 //Letra c) com função funcional
-function deletarItemFuncional (idEscolhido: number): void {
-    lista.splice(lista.findIndex(i => i.id === idEscolhido), 1)
+function deletarItemFuncional(idEscolhido: number): void {
+    lista.splice(lista.findIndex(i=> i.id === idEscolhido), 1)
 }
 
 //Letra d) com função imperativa
-function atualizarItemImperativa (idEscolhido: number, tipo: string, informacaoAtualizada: string): void {
+function atualizarItemImperativa(idEscolhido: number, tipo: string, informacaoAtualizada: string): void {
     for (let indice = 0; indice < lista.length; indice++) {
-        let dadosPessoa = lista[indice];
-        let idPessoa = dadosPessoa.id;
+        const dadosPessoa = lista[indice];
+        const idPessoa = dadosPessoa.id;
 
         if (idPessoa === idEscolhido) {
-            if (tipo === "n") {
-                let nomePessoa = informacaoAtualizada
+            if (tipo === "nome") {
+                const nomePessoa = informacaoAtualizada
                 dadosPessoa.name = nomePessoa
                 break
             }
-            else if (tipo === "b") {
-                let bioPessoa = informacaoAtualizada
+            else if (tipo === "bio") {
+                const bioPessoa = informacaoAtualizada
                 dadosPessoa.bio = bioPessoa
                 break
             }
@@ -78,12 +113,12 @@ function atualizarItemImperativa (idEscolhido: number, tipo: string, informacaoA
 }
 
 //Letra d) com função funcional
-function atualizarItemFuncional (idEscolhido: number, tipo: string, informacaoAtualizada: string): void {
-    if (tipo === "n") {
-        lista[lista.findIndex(indice => indice.id === idEscolhido)].name = informacaoAtualizada
+function atualizarItemFuncional(idEscolhido: number, tipo: string, informacaoAtualizada: string): void {
+    if (tipo === "nome") {
+        lista[lista.findIndex(indice=> indice.id === idEscolhido)].name = informacaoAtualizada
     }
-    else if (tipo === "b") {
-        lista[lista.findIndex(indice => indice.id === idEscolhido)].bio = informacaoAtualizada
+    else if (tipo === "bio") {
+        lista[lista.findIndex(indice=> indice.id === idEscolhido)].bio = informacaoAtualizada
     }
 }
 
