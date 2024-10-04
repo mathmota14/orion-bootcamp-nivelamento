@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+header {
+    border-bottom: 1px solid #a42297;
+    height: 42em;
+    background-image: linear-gradient(297deg, rgba(150, 40, 173, 0.55) 0%, #e58beb8c 50%, rgba(184,49,204,0.55) 100%), url(banner.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1 {
+    font-size: 3.6em;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.nivelamento-1, .nivelamento-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 3em;
+    background-image: linear-gradient(163deg, rgba(141,41,200,0.7) 0%, rgba(110,29,192,0.8) 61%, rgba(64,8,171,1) 100%);
+    border-bottom: 2px solid #a42297;
+}
+
+.nivelamento-2 {
+    background-image: linear-gradient(20deg, rgba(141,41,200,0.7) 0%, rgba(110,29,192,0.8) 61%, rgba(64,8,171,1) 100%);
+}
+
+h2 {
+    padding-top: 2em;
+    padding-bottom: 1em;
+}
+
+span {
+    font-size: 1.4em;
+    padding-top: 1.4em;
+    padding-bottom: 0.5em;
+}
+
+.visualizacao {
+    display: flex;
+    justify-content: space-evenly; 
+    width: 100%;
+}
+
+.resposta {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 40%;
+}
+
+.resposta img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.explicacao {
+    width: 40%;
+}
+
+p{
+    padding-top: 1.2em;
+    font-size: 1.1em;
+}
+
+form {
+    padding-top: 0.8em;
+}
+
+label {
+    font-size: 1.2em;
+}
+
+input[type="text"] {
+    border: 1px solid #a0a0a0;
+    padding: 0.5em 0.5em;
+    border-radius: 0.4em;
+}
+
+input[type="submit"] {
+    background-color: #e58beb8c;
+    border: none;
+    border-radius: 1em;
+    color: black;
+    padding: 0.5em 1em;
+    cursor: pointer;
+}

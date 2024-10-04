@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nivelamento 3</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Página Web para visualização das respostas</h1>
+    </header>
+
+    <main>
+      <section class="nivelamento-1">
+        <h2>Nivelamento 1</h2>
+
+        <div class="visualizacao">
+          <div class="resposta">
+            <span> 1.a) </span>
+            <img
+              src="n1a.png"
+              alt="Código para o exercício da letra a) do nivelamento 1"
+            />
+          </div>
+
+          <div class="resposta">
+            <span> 1.b) </span>
+            <img
+              src="n1b.png"
+              alt="Código para o exercício da letra b) do nivelamento 1"
+            />
+          </div>
+        </div>
+
+        <div class="visualizacao">
+          <div class="explicacao">
+            <p>
+              <b>1.</b> A variavel "listaLetras" vai ser uma lista com todos os caracteres da palavra colocada <br>
+              <b>2.</b> A variável "vogais" é uma lista com todas as vogais <br>
+              <b>3.</b> A variável "contagem" começará com o valor 0 <br>
+              <b>4.</b> Em seguida começamos uma estrutura de repetição que vai percorrer cada caractere da lista "listaLetras" <br>
+              <b>5.</b> A variável "letra" será cada letra da palavra colocada pelo usuário em letra minúscula para ser mais simples, considerando que o usuário poderia ter colocado em letra maiúscula também <br>
+              <b>6.</b> Em seguida o código vai verificar se essa letra é uma vogal (na lista de vogais), e se for uma vogal aumenta o número da variável "contagem" em 1 <br>
+              <b>7.</b> No final será retornado o valor final de "contagem" que será a quantidade de vogais presentes <br>
+            </p>
+          </div>
+
+          <div class="explicacao">
+            <p>
+              <b>1. </b> A única diferença desse código pro outro é que a variável "listaLetras" será cada caractere da palavra colocada no formulário que tem o id "idInputFormulario"
+            </p>
+          </div>
+        </div>
+
+        <span> O formulário em questão </span>
+
+        <form>
+          <label>Texto: </label>
+          <input type="text" id="idInputFormulario">
+          <input type="submit" onclick="contarVogaisFormulario()">
+        </form>
+      </section>
+
+      <section class="nivelamento-2">
+        <h2>Nivelamento 2</h2>
+        <span> 2.a) </span>
+
+        <div class="visualizacao">
+          <div class="resposta">
+            <span> Imperativa </span>
+            <img
+              src="n2ai.png"
+              alt="Código imperativa para o exercício da letra a) do nivelamento 2"
+            />
+          </div>
+
+          <div class="resposta">
+            <span> Funcional </span>
+            <img
+              src="n2af.png"
+              alt="Código funcional para o exercício da letra a) do nivelamento 2"
+            />
+          </div>
+        </div>
+
+        <div class="visualizacao">
+          <div class="explicacao">
+            <p>
+              <b>1.</b> A função começa com uma estrutura de repetição que vai percorrer cada item da "lista" <br>
+              <b>2.</b> A variável "dadosPessoa" será cada item da lista percorrida <br>
+              <b>3.</b> A variável "idPessoa" pegará o valor do id de cada item da lista <br>
+              <b>4.</b> Em seguida é verificado se o valor de id que a pessoa colocou está presente em algum desses itens da lista <br>
+              <b>5.</b> Caso esteja presente então é retornado a bio para o usuário<br>
+              <b>6.</b> Caso o id não for encontrado então é retornado uma mensagem de erro "ID não encontrado" <br>
+            </p>
+          </div>
+
+          <div class="explicacao">
+            <p>
+              <b>1. </b> A função já começa percorrendo cada item da lista e tentando achar o item da lista onde o valor do id passado pelo usuário é o mesmo do id de algum desses itens <br>
+              <b>2. </b> Depois de achar é retornado a bio desse item, caso não é retornado uma mensagem de erro "ID não encontrado" <br>
+            </p>
+          </div>
+        </div>
+
+        <span> 2.b) </span>
+
+        <div class="visualizacao">
+          <div class="resposta">
+            <span> Imperativa </span>
+            <img
+              src="n2bi.png"
+              alt="Código imperativa para o exercício da letra b) do nivelamento 2"
+            />
+          </div>
+
+          <div class="resposta">
+            <span> Funcional </span>
+            <img
+              src="n2bf.png"
+              alt="Código funcional para o exercício da letra b) do nivelamento 2"
+            />
+          </div>
+        </div>
+
+        <div class="visualizacao">
+          <div class="explicacao">
+            <p>
+              <b>1.</b> A função começa com uma estrutura de repetição que vai percorrer cada item da "lista" <br>
+              <b>2.</b> A variável "dadosPessoa" será cada item da lista percorrida <br>
+              <b>3.</b> A variável "idPessoa" pegará o valor do id de cada item da lista <br>
+              <b>4.</b> Em seguida é verificado se o valor de id que a pessoa colocou está presente em algum desses itens da lista <br>
+              <b>5.</b> Caso esteja presente então é retornado o name para o usuário <br>
+              <b>6.</b> Caso o id não for encontrado então é retornado uma mensagem de erro "ID não encontrado" <br>
+            </p>
+          </div>
+
+          <div class="explicacao">
+            <p>
+              <b>1. </b> A função já começa percorrendo cada item da lista e tentando achar o item da lista onde o valor do id passado pelo usuário é o mesmo do id de algum desses itens <br>
+              <b>2. </b> Depois de achar é retornado o name desse item, caso não é retornado uma mensagem de erro "ID não encontrado" <br>
+            </p>
+          </div>
+        </div>
+
+        <span> 2.c) </span>
+
+        <div class="visualizacao">
+          <div class="resposta">
+            <span> Imperativa </span>
+            <img
+              src="n2ci.png"
+              alt="Código imperativa para o exercício da letra c) do nivelamento 2"
+            />
+          </div>
+
+          <div class="resposta">
+            <span> Funcional </span>
+            <img
+              src="n2cf.png"
+              alt="Código funcional para o exercício da letra c) do nivelamento 2"
+            />
+          </div>
+        </div>
+
+        <div class="visualizacao">
+          <div class="explicacao">
+            <p>
+              <b>1.</b> A função começa com uma estrutura de repetição que vai percorrer cada item da "lista" <br>
+              <b>2.</b> A variável "dadosPessoa" será cada item da lista percorrida <br>
+              <b>3.</b> A variável "idPessoa" pegará o valor do id de cada item da lista <br>
+              <b>4.</b> Em seguida é verificado se o valor de id que a pessoa colocou está presente em algum desses itens da lista <br>
+              <b>5.</b> Caso esteja presente então é removido na lista o item que possui esse id passado <br>
+              <b>6.</b> Caso não esteja presente, então nada é mudado na lista <br>
+            </p>
+          </div>
+
+          <div class="explicacao">
+            <p>
+              <b>1. </b> A função procura em qual índice da lista o id passado é o mesmo do id que estamos procurando, caso ache então é removido da lista o item desse índice na lista <br>
+              <b>2. </b> Caso não ache, então nada é mudado na lista <br>
+            </p>
+          </div>
+        </div>
+
+        <span> 2.d) </span>
+
+        <div class="visualizacao">
+          <div class="resposta">
+            <span> Imperativa </span>
+            <img
+              src="n2di.png"
+              alt="Código imperativa para o exercício da letra d) do nivelamento 2"
+            />
+          </div>
+
+          <div class="resposta">
+            <span> Funcional </span>
+            <img
+              src="n2df.png"
+              alt="Código funcional para o exercício da letra d) do nivelamento 2"
+            />
+          </div>
+        </div>
+
+        <div class="visualizacao">
+          <div class="explicacao">
+            <p>
+              <b>1.</b> A função começa com uma estrutura de repetição que vai percorrer cada item da "lista" <br>
+              <b>2.</b> A variável "dadosPessoa" será cada item da lista percorrida <br>
+              <b>3.</b> A variável "idPessoa" pegará o valor do id de cada item da lista <br>
+              <b>4.</b> Em seguida é verificado se o valor de id que a pessoa colocou está presente em algum desses itens da lista <br>
+              <b>5.</b> Caso esteja então depois é verificado se o parâmetro "tipo" é igual a "nome" ou "bio"<br>
+              <b>6.</b> Caso seja "nome" então o name é alterado para o nome que foi informado pelo usuário <br>
+              <b>7.</b> Caso seja "bio" então a bio é alterada para a bio que foi informada pelo usuário <br>
+              <b>8.</b> Caso não ache o id ou o valor do tipo, então nada é mudado na lista<br>
+            </p>
+          </div>
+
+          <div class="explicacao">
+            <p>
+              <b>1. </b> A função começa verificando se o o parâmetro "tipo" é igual a "nome" ou "bio" <br>
+              <b>2. </b> Se for "nome" ele vai procurar em qual índice da lista o id passado pelo usuário é o mesmo id do item na lista e depois substituir o name desse item pelo que o usuário informou <br>
+              <b>3. </b> Se for "bio" ele vai procurar em qual índice da lista o id passado pelo usuário é o mesmo id do item na lista e depois substituir a bio desse item pelo que o usuário informou <br>
+              <b>4.</b> Caso o tipo informado não for "nome" ou "bio", ou não ache o id, então nada é mudado na lista<br>
+            </p>
+          </div>
+        </div>
+
+        <span> Histórico de commits </span>
+
+        <div class="visualizacao">
+          <div class="resposta">
+            <img
+              src="commit.png"
+              alt="Código imperativa para o exercício da letra d) do nivelamento 2"
+            />
+          </div>
+        </div>
+
+        <div class="visualizacao">
+          <div class="explicacao">
+            <p>
+              <b>1.</b> Começou o commit inicial com o README.md <br>
+              <b>2.</b> O próximo commit é "feat: criação do código inicial" por se tratar de uma feature e depois a adição dos códigos tanto do nivelamento 1 e nivelamento 2 <br>
+              <b>3.</b> O próximo commit é "fix: revisão de código" após algumas correções e sugestões dos monitores <br>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      function contarVogaisFormulario() {
+        const textoDigitado =
+          document.querySelector("#idInputFormulario").value;
+        const listaLetras = textoDigitado.split("");
+        const vogais = ["a", "e", "i", "o", "u", "á", "à", "ã", "â", "é", "ê", "í", "ó", "õ", "ô", "ú",];
+        let contagem = 0;
+
+        for (let i = 0; i < listaLetras.length; i++) {
+          const letra = listaLetras[i].toLowerCase();
+
+          if (vogais.includes(letra)) {
+            contagem++;
+          }
+        }
+        alert(contagem);
+      }
+    </script>
+  </body>
+</html>
